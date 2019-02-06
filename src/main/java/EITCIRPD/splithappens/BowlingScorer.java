@@ -19,7 +19,7 @@ public class BowlingScorer {
 		round = 1;
 		Multimap<Integer, Integer> game = ArrayListMultimap.create();
 		Map<Integer, Integer> rollsLeft = prepareGame();
-		List<Character> rolls = rollInput.chars().mapToObj(e -> (char) e).collect(Collectors.toList());
+		List<Character> rolls = rollInput.trim().chars().mapToObj(e -> (char) e).collect(Collectors.toList());
 
 		for (Character roll : rolls) {
 			switch (roll) {
